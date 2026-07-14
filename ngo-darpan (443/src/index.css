@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --color-gold-50: #F8F9F5;
+  --color-gold-100: #F1F3E8;
+  --color-gold-200: #636B2F;
+  --color-gold-300: #BAC095;
+  --color-gold-400: #BAC095;
+  --color-gold-500: #BAC095;
+  --color-gold-600: #636B2F;
+  --color-gold-700: #3D4127;
+  --color-gold-800: #3D4127;
+  --color-gold-900: #1a1a1a;
+  --color-navy-50: #F8F9F5;
+  --color-navy-100: #F1F3E8;
+  --color-navy-200: #D1D6B6;
+  --color-navy-300: #BAC095;
+  --color-navy-400: #636B2F;
+  --color-navy-500: #636B2F;
+  --color-navy-600: #BAC095;
+  --color-navy-700: #3D4127;
+  --color-navy-800: #3D4127;
+  --color-navy-900: #1a1a1a;
+  --color-navy-950: #3D4127;
+
+  /* Custom palette */
+  --color-pastel-lavender: #BAC095;
+  --color-pastel-peach: #636B2F;
+  --color-pastel-blush: #D4DE95;
+  --color-pastel-ivory: #F8F9F5;
+  --color-pastel-dark: #3D4127;
+  --color-pastel-text: #5B6045;
+  --color-pastel-border: #D1D6B6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism custom components */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-panel-dark {
+  background: rgba(10, 14, 34, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Floating custom animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.1); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+/* Custom scrollbar to keep it looking luxurious */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #BAC095;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #636B2F;
+}
